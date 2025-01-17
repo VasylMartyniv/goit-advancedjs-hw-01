@@ -1,0 +1,14 @@
+.sl-overlay {
+  background-color: rgba(
+    46,
+    47,
+    66,
+    0.8
+  ); /* Change this to your desired color */
+}
+.sl-caption,
+.sl-counter,
+.sl-close,
+.sl-navigation button {
+  color: white !important;
+}

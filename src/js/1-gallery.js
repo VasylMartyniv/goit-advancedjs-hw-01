@@ -1,5 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import '../css/custom-overlay.css';
 
 const images = [
   {
@@ -87,7 +88,8 @@ const galleryMarkup = images
 galleryContainer.innerHTML = galleryMarkup;
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
+  captions: false,
   captionsData: 'alt',
   captionDelay: 250,
+  overlayOpacity: 1,
 });
