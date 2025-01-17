@@ -11,13 +11,18 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
+      - name: Clean up node_modules and package-lock 🔧
+        run: |
+          rm -rf node_modules
+          rm package-lock.json
+
       - name: Install and build 🔧
         run: |
           npm install
           npm run build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: VasylMartyniv/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
           folder: dist
